@@ -1,0 +1,68 @@
+report_type: PADER
+title: Periodic Adverse Drug Experience Report
+product: Bisoprolol
+version: "1.0"
+
+sections:
+  - id: reporting_period
+    title: Reporting Period
+    mode: table
+    required_analyses: [reporting_period]
+    instructions: State the interval covered and the total number of cases received within it.
+
+  - id: narrative_summary
+    title: Narrative Summary and Analysis
+    mode: both
+    required_analyses: [case_counts, seriousness_breakdown, reactions]
+    instructions: >-
+      Summarise the overall case volume, the split between serious and non-serious cases, the
+      seriousness criteria most frequently met, and the most frequently reported reactions. Keep it
+      to a concise regulatory overview; detailed tables follow in later sections.
+
+  - id: summary_analysis_cases
+    title: Summary Analysis of Cases
+    mode: both
+    required_analyses: [case_counts, demographics]
+    instructions: >-
+      Describe the case population: totals, seriousness split, and the distribution by age group,
+      sex, and country of occurrence. Note where demographic data is missing or where a country
+      value is a region rather than a specific country.
+
+  - id: reaction_analysis
+    title: Reaction / Adverse Event Analysis
+    mode: both
+    required_analyses: [reactions, outcomes]
+    instructions: >-
+      Report the most frequently reported reactions overall and among serious cases at MedDRA
+      Preferred Term level, and summarise the distribution of reaction outcomes. Note that System
+      Organ Class grouping is not available in the source data.
+
+  - id: serious_cases_15day
+    title: Serious Cases / 15-Day Alerts
+    mode: both
+    required_analyses: [alert_cases, seriousness_breakdown]
+    instructions: >-
+      Report the number of cases meeting expedited (15-day) reporting criteria and break down the
+      seriousness criteria met. Do not assert causality.
+
+  - id: trends
+    title: Trends and Important Observations
+    mode: both
+    required_analyses: [trends]
+    instructions: >-
+      Describe the monthly case receipt volume across the period. Present any change in volume as an
+      observation for human review, not as a confirmed safety signal.
+
+  - id: history_of_actions
+    title: History of Actions
+    mode: narrative
+    required_analyses: [history_of_actions]
+    instructions: >-
+      If no history of actions is recorded in the source data, state explicitly that none was
+      provided for this reporting period. Do not invent regulatory or company actions.
+
+  - id: case_index
+    title: Case Index / Listing
+    mode: table
+    required_analyses: [case_index]
+    instructions: A line listing of all cases in the reporting period.
