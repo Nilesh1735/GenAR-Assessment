@@ -1,0 +1,10 @@
+{
+  "report_type": "PADER",
+  "config_version": "1.0",
+  "dataset": "Bisoprolol_icsr_sample_1068rows.xlsx",
+  "dataset_sha256": "1405a016147ac49816f24641cd0aa61b6ea846852b0b24926d9ec0a9e0df449e",
+  "model": "llama-3.3-70b-versatile",
+  "prompts_hash": "98e9270bfd10784a",
+  "n_cases": 1024,
+  "generated_at": "2026-08-16T20:05:59+00:00"
+}
